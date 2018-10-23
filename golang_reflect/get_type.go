@@ -1,28 +1,28 @@
-package main
+package golang_reflect
 
 import (
 	"log"
 	"reflect"
 )
 
-type student struct {
-	Id_   int64  `json:"id"`
-	Num_  string `json:"num_"`
-	Name_ string `json:"name_"`
-	Sex_  int    `json:"sex_"`
-}
 
-func (s *student) SetName(name string) {
-	s.Name_ = name
-}
-func main() {
+func CheckTypeOf() {
 	var ff float64
 	ff = 9.887
 	r := reflect.TypeOf(ff)
 	log.Println(r.String())
 
-	var ss *student
-	ss = new(student)
-	r = reflect.TypeOf(ss)
+	var s1 *student
+	s1 = new(student)
+	s1.SetName("test")
+	r = reflect.TypeOf(s1)
+	log.Println(r.String())
+
+	var s2 student
+	r = reflect.TypeOf(s2)
+	log.Println(r.String())
+
+	var sli []int
+	r = reflect.TypeOf(sli)
 	log.Println(r.String())
 }
