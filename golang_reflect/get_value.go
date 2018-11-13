@@ -11,13 +11,13 @@ func CheckValueOf() {
 	ff_r := reflect.ValueOf(ff)
 	log.Println(ff_r)
 
-	var s1 *student
-	s1 = new(student)
+	var s1 *Student
+	s1 = new(Student)
 	s1.SetName("test")
 	s1_r := reflect.ValueOf(s1)
 	log.Println(s1_r)
 
-	var s2 student
+	var s2 Student
 	s2.SetName("test")
 	s2_r := reflect.ValueOf(s2)
 	log.Println(s2_r)

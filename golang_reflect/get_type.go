@@ -12,13 +12,13 @@ func CheckTypeOf() {
 	r := reflect.TypeOf(ff)
 	log.Println(r.String())
 
-	var s1 *student
-	s1 = new(student)
+	var s1 *Student
+	s1 = new(Student)
 	s1.SetName("test")
 	r = reflect.TypeOf(s1)
 	log.Println(r.String())
 
-	var s2 student
+	var s2 Student
 	r = reflect.TypeOf(s2)
 	log.Println(r.String())
 

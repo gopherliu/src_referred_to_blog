@@ -1,12 +1,19 @@
 package golang_reflect
 
-type student struct {
-	id_   int64  `json:"id"`
-	num_  string `json:"num_"`
-	name_ string `json:"name_"`
-	sex_  int    `json:"sex_"`
+import (
+	"log"
+)
+
+type Student struct {
+	Id_   int64  `json:"id"`
+	Name_ string `json:"name"`
+	Sex_  int    `json:"sex"`
 }
 
-func (s *student) SetName(name string) {
-	s.name_ = name
+func (s *Student) SetName(name string) {
+	s.Name_ = name
+}
+
+func (s Student) ReflectFuncCall() {
+	log.Println("被调用了")
 }
